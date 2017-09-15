@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 public class LoginController {
 	@RequestMapping("/login")
-	public String loginMessage(@RequestParam String name, ModelMap model) {
-		model.put("e" , name); 
+	public String loginMessage(ModelMap model) {
+		//model.put("e" , name); 
 		return "login";
 	}	
 }
