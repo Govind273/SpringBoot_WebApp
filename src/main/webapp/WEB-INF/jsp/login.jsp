@@ -3,7 +3,7 @@
 <title>Yahoo!!</title>
 </head>
 <body>
-<form>
+<form method = "post">
 	Name: <input type="text" name="name"/> 
 	<input type ="submit"/>
 	<br><br>
