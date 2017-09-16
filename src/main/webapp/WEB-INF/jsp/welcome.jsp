@@ -3,6 +3,6 @@
 <title>Yahoo!!</title>
 </head>
 <body>
-<h1> Welcome ${name} </h1>
+<h1> Welcome ${name} Your Password is ${pass}</h1>
 </body>
 </html>
