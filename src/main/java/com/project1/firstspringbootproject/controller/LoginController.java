@@ -1,5 +1,6 @@
 package com.project1.firstspringbootproject.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,7 +14,8 @@ import com.project1.firstspringbootproject.service.LoginService;
 @Controller
 public class LoginController {
 	
-	//LoginService service;
+	@Autowired
+	LoginService service;
 	
 	@RequestMapping(value="/login", method= RequestMethod.GET)
 	public String showLogin(ModelMap model) {
@@ -22,6 +24,12 @@ public class LoginController {
 	}	
 	@RequestMapping(value="/login", method= RequestMethod.POST)
 	public String showWelcome(ModelMap model, @RequestParam String name, @RequestParam String password) {
+		boolean isValidUser = service.validateUser(name, password);
+		
+		if(!isValidUser) {
+			//model.put("message", message);
+			return "login";
+		}
 		model.put("name" , name); 
 		model.put("pass" , password);
 		return "welcome";
