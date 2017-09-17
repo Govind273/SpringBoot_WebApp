@@ -4,11 +4,13 @@
 </head>
 <body>
 <form method = "post">
+	${message}
+	<br>
 	Name: <input type="text" name="name"/> 
-	<input type ="submit"/>
+	
 	<br><br>
-	Password: <input type="password" name="name"/> 
-	<input type ="submit" name="password"/>
+	Password: <input type="password" name="password"/> 
+	<input type ="submit"/>
 	
 </form>
 </body>

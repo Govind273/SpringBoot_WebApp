@@ -6,8 +6,6 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
-
 import com.project1.firstspringbootproject.service.LoginService;
 
 
@@ -27,7 +25,7 @@ public class LoginController {
 		boolean isValidUser = service.validateUser(name, password);
 		
 		if(!isValidUser) {
-			//model.put("message", message);
+			model.put("message", "Please correct the email and Password");
 			return "login";
 		}
 		model.put("name" , name); 
