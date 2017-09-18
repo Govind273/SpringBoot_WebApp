@@ -17,9 +17,11 @@ public class LoginController {
 	
 	@RequestMapping(value="/login", method= RequestMethod.GET)
 	public String showLogin(ModelMap model) {
-		//model.put("e" , name); 
+		
 		return "login";
 	}	
+	
+	
 	@RequestMapping(value="/login", method= RequestMethod.POST)
 	public String showWelcome(ModelMap model, @RequestParam String name, @RequestParam String password) {
 		boolean isValidUser = service.validateUser(name, password);

@@ -4,7 +4,6 @@
 </head>
 <body>
 <form method = "post">
-	${message}
 	<br>
 	Name: <input type="text" name="name"/> 
 	
