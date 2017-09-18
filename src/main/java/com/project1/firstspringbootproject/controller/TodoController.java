@@ -18,6 +18,7 @@ public class TodoController {
 	
 	@RequestMapping(value="/list-todos", method= RequestMethod.GET)
 	public String showTodods(ModelMap model) {
+		model.put("todo1", service.retrieveTodos("in28Minutes"));
 		return "list-todos";
 	}	
 	

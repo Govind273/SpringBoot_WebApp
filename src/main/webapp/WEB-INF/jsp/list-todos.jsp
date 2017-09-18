@@ -1,8 +1,8 @@
 <html>
 <head>
-<title>Yahoo!!</title>
+<title>Welcome to the Todos</title>
 </head>
 <body>
-<h1> Welcome ${name} Your Password is ${pass}</h1>
+<h1> Lets create your Todo</h1>
 </body>
 </html>
