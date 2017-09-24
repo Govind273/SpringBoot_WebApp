@@ -26,8 +26,9 @@
 			<td>${item.desc}</td>
 			<td>${item.targetDate}</td>
 			<td>${item.done}</td>
+			<td><a href="/delete-todo?id=${item.id}"  type="button" class= "btn btn-warning">Delete</a></td>
 		</tr>
-	</c:forEach>
+	</c:forEach> 
 </tbody>
 </table>
 
