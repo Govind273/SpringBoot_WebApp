@@ -1,16 +1,17 @@
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>  s
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
 <html>
 
 <head>
 <title>Welcome to the Todo Application</title>
+<link href="webjars/bootstrap/3.3.6/css/bootstrap.min.css"rel="stylesheet">
 </head>
 <body>
-<h1> Your Todo</h1>
+<h1> Todos for ${name}</h1>
 
-//add a table
-<table>
-<caption> Your Todos are here </caption>
+<div class="container">
+<table class="table table-striped">
+<caption> Today's Todo </caption>
 <thead>
 	<tr>
 		<th>Description</th>
@@ -24,14 +25,18 @@
 		<tr>
 			<td>${item.desc}</td>
 			<td>${item.targetDate}</td>
-			<td>${ietm.isDone}</td>
+			<td>${item.done}</td>
 		</tr>
 	</c:forEach>
 </tbody>
 </table>
 
 
+<div><a class="button" href="/add-todo">Add a todo</a></div>
 
-<a href="/add-todo">Add a todo</a>
+
+<script src="webjars/jquery/1.9.1/jquery.min.js"></script>
+<script src="webjars/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</div>
 </body>
 </html>
