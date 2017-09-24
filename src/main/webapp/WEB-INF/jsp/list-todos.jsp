@@ -1,5 +1,7 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>  s
+
 <html>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%> 
+
 <head>
 <title>Welcome to the Todo Application</title>
 </head>
@@ -9,14 +11,24 @@
 //add a table
 <table>
 <caption> Your Todos are here </caption>
-<tr>
-<th>Description</th>
-<th></th>
-<th></th>
-</tr>
-</table>
+<thead>
+	<tr>
+		<th>Description</th>
+		<th>Date</th>
+		<th>Is it Done?</th>
+	</tr>
+</thead>
 
-${todo1}
+<tbody>
+	 <c:forEach items="${todo1}" var="item">
+		<tr>
+			<td>${item.desc}</td>
+			<td>${item.targetDate}</td>
+			<td>${ietm.isDone}</td>
+		</tr>
+	</c:forEach>
+</tbody>
+</table>
 
 
 
