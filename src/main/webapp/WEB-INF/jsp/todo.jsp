@@ -1,5 +1,5 @@
+<%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <html>
-
 <head>
 <title>Welcome to the Todo Application</title>
 <link href="webjars/bootstrap/3.3.6/css/bootstrap.min.css"rel="stylesheet">
