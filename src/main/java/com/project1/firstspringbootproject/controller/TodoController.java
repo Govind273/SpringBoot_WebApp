@@ -59,9 +59,7 @@ public class TodoController {
 		todo.setUser((String)model.get("name"));
 		service.updateTodo(todo);
 		return "redirect:/list-todos";
-	} 
-	
-	
+	}
 	
 	@RequestMapping(value="/add-todo", method= RequestMethod.POST)
 	public String addTodod(ModelMap model,@Valid Todo todo, BindingResult result) {

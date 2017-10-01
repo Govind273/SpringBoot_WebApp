@@ -26,9 +26,9 @@
 	 <c:forEach items="${todo1}" var="item">
 		<tr>
 			<td>${item.desc}</td>
-			<td>${item.targetDate}</td>
+			<td>${item.targetDate}</td> 
 			<td>${item.done}</td>
-			<td><a href ="/update-todo?id=${item.id}" type="button" class ="btn btn-warning">Update</a></td>
+			<td><a href ="/update-todo?id=${item.id}" type="button" class ="btn btn-success ">Update</a></td>
 			<td><a href="/delete-todo?id=${item.id}"  type="button" class= "btn btn-warning">Delete</a></td>
 		</tr>
 	</c:forEach> 
