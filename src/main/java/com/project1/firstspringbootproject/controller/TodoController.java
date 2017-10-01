@@ -31,13 +31,14 @@ public class TodoController {
 	
 	@RequestMapping(value="/add-todo", method= RequestMethod.GET)
 	public String showTodod(ModelMap model) {
+		model.addAttribute("todo",new Todo(0, (String)model.get("name"),"",new Date(),false));
 		return "todo";
 	}	
 	
 	@RequestMapping(value="/delete-todo", method= RequestMethod.GET)
 	public String deletTodo(@RequestParam int id) {
 		service.deleteTodo(id);
-		return "redirect:/list-todos	";
+		return "redirect:/list-todos";
 	}	
 	
 	@RequestMapping(value="/add-todo", method= RequestMethod.POST)
