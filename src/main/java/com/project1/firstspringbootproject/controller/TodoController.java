@@ -53,6 +53,15 @@ public class TodoController {
 		return "redirect:/list-todos";
 	}
 	
+	@RequestMapping(value="/update-todo", method= RequestMethod.POST)
+	public String updateTodod(ModelMap model,@Valid Todo todo, BindingResult result) {
+		if(result.hasErrors()) {
+			return "todo";
+		}
+		 service.addTodo((String)model.get("name"), todo.getDesc(), new Date() ,false);
+		return "redirect:/list-todos";
+	}
+	
 	
 }
   
