@@ -46,7 +46,13 @@
             <artifactId>jquery</artifactId>
             <version>1.9.1</version>
         </dependency>
-	 
+        
+	 	<dependency>
+			<groupId>org.webjars</groupId>
+			<artifactId>bootstrap-datepicker</artifactId>
+			<version>1.0.1</version>
+		</dependency>
+		
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
