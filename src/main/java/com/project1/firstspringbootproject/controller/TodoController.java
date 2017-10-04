@@ -47,7 +47,7 @@ public class TodoController {
 	public String showUpdateTodoPage(@RequestParam int id,ModelMap model) {
 		Todo todo = service.retrieveTodo(id);  
 		model.put("todo", todo);
-		return "todo";
+		return "todo"; 
 	} 
 	
 	@RequestMapping(value="/update-todo", method= RequestMethod.POST)
